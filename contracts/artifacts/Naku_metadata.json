@@ -1,0 +1,298 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "hashId",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "wallet",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "numTurno",
+						"type": "uint256"
+					}
+				],
+				"name": "agregarParticipante",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "hashId",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "montoAportar",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "numeroRondas",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "walletAnfitrion",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "numTurno",
+						"type": "uint256"
+					}
+				],
+				"name": "crearSala",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "listaSalas",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "hashId",
+						"type": "string"
+					}
+				],
+				"name": "obtenerHistorialTransacciones",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "from",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "to",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "monto",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "fecha",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Naku.Transaccion[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "hashId",
+						"type": "string"
+					}
+				],
+				"name": "obtenerParticipantes",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "wallet",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "numTurno",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "haRecibido",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct Naku.Participante[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "hashId",
+						"type": "string"
+					}
+				],
+				"name": "obtenerSala",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "anfitrion",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "montoAportar",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "montoTotalAportar",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "numeroRondas",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "rondaActual",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "fechaInicio",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "fechaFin",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "salaFinalizada",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "hashId",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "walletParticipante",
+						"type": "address"
+					}
+				],
+				"name": "realizarEnvio",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "hashId",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "monto",
+						"type": "uint256"
+					}
+				],
+				"name": "registrarTransaccion",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Naku.sol": "Naku"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Naku.sol": {
+			"keccak256": "0x75e97b6f8d63b84b36e8a394917d6cbceee0c13e58e0f85106ec6b4c9ed9d3f9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://54ad90b96c374162b749ff3d80e0ddf5eb8f78aaabba9cdb69f29e38e3084a33",
+				"dweb:/ipfs/QmdGYtXCMzWrM231pfP78ENjmSKksEVP9X4XxRPs5RzGs3"
+			]
+		}
+	},
+	"version": 1
+}
